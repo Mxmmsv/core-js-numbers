@@ -470,7 +470,11 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  throw new Error('Not implemented');
+  return (
+    typeof number === 'number' &&
+    Number.isFinite(number) &&
+    !Number.isNaN(number)
+  );
 }
 
 /**
